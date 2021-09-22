@@ -1,0 +1,52 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+
+.container{
+    width: 90vw;
+    margin: 5rem auto;
+    background: $white;
+    border-radius: $radius;
+    padding: 2.5rem 2rem;
+    max-width: $fixed-width;
+    display: grid;
+    grid-gap: 1rem 2rem;
+    gap: 1rem 2rem;
+    h3{
+        font-weight: 500;
+        line-height: 1.2;
+    }
+}
+
+// .btn{
+//     border-color: transparent;
+//     width: 2rem;
+//     height: 2rem;
+//     background: $grey-9;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     border-radius: 50%;
+//     color: $red-dark;
+//     margin-left: 1rem;
+//     align-self: center;
+// }
+
+input {
+    background: transparent;
+    border: none;
+}
+
+// @include large {
+//     .section{
+//         width: 95vw;
+//     }
+// }
+
+@media screen and (min-width: 992px){
+    .container{
+        display: grid;
+        grid-template-columns: 250px 1fr;
+    }
+}
