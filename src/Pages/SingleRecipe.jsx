@@ -2,8 +2,8 @@ import React from 'react'
 
 const SingleRecipe = () => {
     return (
-        <div>
-            
+        <div className="">
+            Single Recipe
         </div>
     )
 }

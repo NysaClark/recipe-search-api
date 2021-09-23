@@ -8,6 +8,7 @@ export const reducer = (state, action) => {
             ...state,
             loading: false,
             hits: action.payload.hits,
+            nbPages: action.payload.count / action.payload.to,
         }
         case "HANDLE_SEARCH": return {
             ...state,

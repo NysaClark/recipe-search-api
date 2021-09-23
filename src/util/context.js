@@ -7,6 +7,7 @@ const initialState = {
     query: "chicken",
     hits: [],
     page: 1,
+    nbPages: 1
 };
 
 const AppContext = React.createContext();
@@ -42,7 +43,7 @@ export const AppProvider = ({children}) => {
 
     useEffect(() => {
         fetchRecipes(`${API_ENDPOINT}q=${state.query}`);
-    }, [state.query, state,page]);
+    }, [state.query]);
 
     return (
         <AppContext.Provider value ={{...state, handleSearch}}>

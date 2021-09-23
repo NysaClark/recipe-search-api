@@ -1,0 +1,22 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.loading{
+    text-align: center;
+    margin-top: 10rem;
+    .spinner{
+        @include box(5.5rem);
+        @include center-auto;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: $primary-4;
+        animation: spinner 0.5s linear infinite;
+        margin-bottom: .3rem;
+    }
+    @keyframes spinner {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

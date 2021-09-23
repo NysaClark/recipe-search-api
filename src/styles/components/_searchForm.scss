@@ -5,27 +5,38 @@
 .search-form{
     width: 90vw;
     max-width: $max-width;
-    margin: 0 auto;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin: 5rem auto 3rem;
     .form-input{
         width: 100%;
-        border: transparent;
-        max-width: $fixed-width;
-        background: $white;
+        max-width: 600px;
+        border: none;
+        border-bottom: 3px solid $primary-6;
+        background: transparent;
         padding: 1rem;
-        color: $black;
+        color: $primary-2;
+        text-transform: uppercase;
         font-size: 1rem;
-        border-radius: $radius;
+        // font-weight: 600;
         letter-spacing: $spacing;
         margin-top: 1rem;
+        transition: $transition;
+        &:focus, &:hover{
+            outline: none;
+            border-bottom: 3px solid $primary-4;
+        }
+        &::placeholder{
+            color: $primary-2;
+        }
     }
-    .error{
-        color: $red-dark;
-        text-transform: capitalize;
-        padding-top: 0.3rem;
-        letter-spacing: $spacing;
-        font-weight: 500;
-        font-size: 1.25rem;
+    h2{
+        color: $primary-0;
+    }
+}
+
+@include tablet {
+    .search-form{
+        h2{
+            font-size: 2.5rem;
+        }
     }
 }

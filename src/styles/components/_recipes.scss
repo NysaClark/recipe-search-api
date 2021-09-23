@@ -1,0 +1,22 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.recipes{
+    width: 90vw;
+    max-width: 2000px;
+    display: grid;
+    gap: 2rem;
+    padding: 3rem 0 5rem 0;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    .recipe{
+        margin: 0 auto;
+
+        img{
+            @include box(auto, 400px);
+            max-width: 300px;
+            display: block;
+            object-fit: cover;
+        }
+    }
+}

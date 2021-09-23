@@ -1,0 +1,35 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.btn-container{
+    width: 90vw;
+    max-width: $max-width;
+    margin: 0 auto 1.5rem;
+    @include flex-center;
+    button{
+        margin: 1rem;
+        padding: .25rem .5rem;
+        text-transform: capitalize;
+        font-weight: 700;
+        border-color: transparent;
+        background: $primary-6;
+        border-radius: $radius;
+        color: $white;
+        letter-spacing: $spacing;
+        cursor: pointer;
+        transition: $transition;
+        &:hover, &:active{
+            background: $primary-4;
+        }
+        &:disabled{
+            cursor: not-allowed;
+        }
+    }
+    p{
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $primary-2;
+    }
+}
