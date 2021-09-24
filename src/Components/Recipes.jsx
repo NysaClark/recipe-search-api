@@ -4,12 +4,12 @@ import {Link} from 'react-router-dom';
 
 const Recipes = () => {
     const {hits} = useGlobalContext();
+    console.log(hits)
     
     return <section className="recipes">
         {hits.map((hit) => {
             const {recipe} = hit;
-
-            const id = recipe.uri.split('_')[1];
+            const id = recipe.uri.split('#')[1];
 
             return (
                 <Link to={`/recipes/${id}`} key={id} className="recipe">
