@@ -7,9 +7,8 @@ export const useFetch = (query) => {
     const [error, setError] = useState({show: false, msg: ""});
     const [hits, setHits] = useState([]);
     // const [page, setPage] = useState(1);
-    const [nbPages, setNbPages] = useState(1)
+    const [nbPages, setNbPages] = useState(1);
 
-    //the url is a varibale that will take in the endpoint and the query
     const fetchRecipes = async (url) => {
         setLoading(true);
         try {
@@ -24,7 +23,7 @@ export const useFetch = (query) => {
                 setHits(data.recipe);
                 setError({show: false, msg: ""});
             }else{
-                data.map((d) => {
+                data.forEach((d) => {
                     const {message} = d;
                     setError({show: true, msg: message})
                 })
