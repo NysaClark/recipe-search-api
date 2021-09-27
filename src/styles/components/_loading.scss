@@ -4,7 +4,7 @@
 
 .loading{
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 50vh;
     .spinner{
         @include box(5.5rem);
         @include center-auto;

@@ -7,16 +7,42 @@
     max-width: 2000px;
     display: grid;
     gap: 2rem;
-    padding: 3rem 0 5rem 0;
+    padding: 2rem 0 5rem 0;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     .recipe{
         margin: 0 auto;
 
-        img{
-            @include box(auto, 400px);
-            max-width: 300px;
-            display: block;
-            object-fit: cover;
+        article{
+            img{
+                @include box(auto, 400px);
+                max-width: 315px;
+                display: block;
+                object-fit: cover;
+                transition: $transition;
+            }
+
+            h4, h5{
+                text-align: center;
+                color: $primary-6;
+                transition: $transition;
+            }
+            h4{
+                margin: .5rem 0;
+            }
+            h5{
+                margin: .3rem 0;
+            }
+
+
+            &:hover{
+                h4, h5{
+                    // margin: .5rem 0;
+                    color: $primary-4;
+                }
+                img{
+                    transform: scale(1.02);
+                }
+            }
         }
     }
 }

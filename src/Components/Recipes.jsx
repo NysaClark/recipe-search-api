@@ -16,6 +16,7 @@ const Recipes = () => {
                     <article>
                         <img src={recipe.image} alt={recipe.label} />
                         <h4>{recipe.label}</h4>
+                        <h5>{recipe.source}</h5>
                     </article>
                 </Link>
             )

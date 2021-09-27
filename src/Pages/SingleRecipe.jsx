@@ -56,6 +56,7 @@ const SingleRecipe = () => {
 
                 {calories && <p>{Math.ceil(calories)} calories</p>}
 
+
                 {dietLabels.length !== 0 && <h5>diet label(s):</h5>}
                 {dietLabels.map((dl, index) => {
                     return <p key={index}>{dl}</p>

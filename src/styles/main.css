@@ -238,24 +238,95 @@ input {
     grid-template-columns: 250px 1fr;
   }
 }
+.single-recipe {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.single-recipe .recipe-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 2.5rem 0;
+}
+.single-recipe .recipe-top .recipe-header {
+  text-align: center;
+}
+.single-recipe .recipe-top .recipe-header img {
+  width: 28rem;
+  margin-top: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s linear;
+}
+.single-recipe .recipe-top .recipe-header:hover img {
+  transform: scale(1.02);
+}
+.single-recipe .recipe-top .recipe-info {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 20%;
+  height: 100%;
+  margin-top: 8.5rem;
+  margin-left: 8rem;
+  padding: 5px 13px;
+  color: #4d2a92;
+  font-size: 1.1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+}
+.single-recipe .recipe-top .recipe-info h4 {
+  margin-top: 0.6rem;
+  font-size: 1.5rem;
+}
+.single-recipe .recipe-top .recipe-info h5 {
+  margin-top: 0.2rem;
+}
+.single-recipe .recipe-top .recipe-info p {
+  color: #344a60;
+  margin-bottom: 0.2rem;
+}
+
 .recipes {
   width: 90vw;
   max-width: 2000px;
   display: grid;
   gap: 2rem;
-  padding: 3rem 0 5rem 0;
+  padding: 2rem 0 5rem 0;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 .recipes .recipe {
   margin: 0 auto;
 }
-.recipes .recipe img {
+.recipes .recipe article img {
   width: auto;
   height: 400px;
-  max-width: 300px;
+  max-width: 315px;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.5s linear;
+}
+.recipes .recipe article h4, .recipes .recipe article h5 {
+  text-align: center;
+  color: #9b7dd9;
+  transition: all 0.5s linear;
+}
+.recipes .recipe article h4 {
+  margin: 0.5rem 0;
+}
+.recipes .recipe article h5 {
+  margin: 0.3rem 0;
+}
+.recipes .recipe article:hover h4, .recipes .recipe article:hover h5 {
+  color: #6e41c8;
+}
+.recipes .recipe article:hover img {
+  transform: scale(1.02);
 }
 
 .btn-container {
@@ -294,7 +365,7 @@ input {
 
 .loading {
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 50vh;
 }
 .loading .spinner {
   width: 5.5rem;
@@ -359,4 +430,4 @@ input {
   .search-form h2 {
     font-size: 2.5rem;
   }
-}/*# sourceMappingURL=main.css.map */
+}
