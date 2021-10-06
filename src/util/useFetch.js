@@ -18,19 +18,23 @@ export const useFetch = (query) => {
                 setHits(data.hits);
                 setNbPages(Math.ceil(data.count / 20));;
                 setError({show: false, msg: ""});
+                setLoading(false);
             }else if(data.recipe){
                 setHits(data.recipe);
                 setError({show: false, msg: ""});
+                setLoading(false);
             }else{
                 data.forEach((d) => {
                     const {message} = d;
                     setError({show: true, msg: message})
+                    setLoading(false);
                 })
             }
             setLoading(false);
 
         } catch (error) {
             console.error(error)
+            setLoading(false);
         }
     };
 

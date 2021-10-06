@@ -40,11 +40,14 @@ const SingleRecipe = () => {
 
   return (
     <section className="single-recipe">
+        <div className="recipe-header">
+            <h2>{label}</h2>
+            <h3>from <a href={url}>{source}</a></h3>
+        </div>
+        
         <div className="recipe-top">
 
-            <div className="recipe-header">
-                <h2>{label}</h2>
-                <h3>from <a href={url}>{source}</a></h3>
+            <div className="recipe-image">
                 <img src={image} alt={label} />
             </div>
 

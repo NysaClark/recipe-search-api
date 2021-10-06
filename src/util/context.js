@@ -4,7 +4,7 @@ import {useFetch} from './useFetch';
 const AppContext = React.createContext();
 
 export const AppProvider = ({children}) => {
-    const [query, setQuery] = useState('chicken');
+    const [query, setQuery] = useState('ice cream cake');
     const [pageNum, setPageNum] = useState(1);
 
     const {loading, error, hits, nbPages} = useFetch(`?q=${query}&`);
